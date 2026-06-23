@@ -1,112 +1,218 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hilos | Modas Flores</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hilos - Modas Flores</title>
 
-<style>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, sans-serif;
+        }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
-}
+        body{
+            background:#fff;
+            color:#333;
+        }
 
-body{
-    background:#f8f8f8;
-}
+        header{
+            background: linear-gradient(135deg, #ffb366, #ff8c42);
+            color:white;
+            padding:20px;
+            text-align:center;
+            position: sticky;
+            top:0;
+            z-index:1000;
+        }
 
-header{
-    background:linear-gradient(135deg,#ffb366,#ff8c42);
-    color:white;
-    text-align:center;
-    padding:40px;
-}
+        nav{
+            margin-top:15px;
+        }
 
-header h1{
-    font-size:50px;
-}
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin:0 15px;
+            font-weight:bold;
+        }
 
-.galeria{
-    width:90%;
-    margin:50px auto;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
-}
+        nav a:hover{
+            text-decoration:underline;
+        }
 
-.card{
-    background:white;
-    border-radius:15px;
-    overflow:hidden;
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
-    transition:.3s;
-}
+        .contenedor-producto {
+            padding: 50px 10%;
+        }
 
-.card:hover{
-    transform:translateY(-10px);
-}
+        .volver {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #ff8c42;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-.card img{
-    width:100%;
-    height:300px;
-    object-fit:cover;
-}
+        .volver:hover {
+            text-decoration: underline;
+        }
 
-.card h3{
-    text-align:center;
-    padding:20px;
-    color:#ff8c42;
-}
+        h2 {
+            color: #ff8c42;
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
 
-.boton{
-    display:block;
-    width:250px;
-    margin:40px auto;
-    text-align:center;
-    background:#ff8c42;
-    color:white;
-    padding:15px;
-    text-decoration:none;
-    border-radius:10px;
-}
+        .descripcion-categoria {
+            font-size: 18px;
+            margin-bottom: 40px;
+            color: #666;
+        }
 
-</style>
+        /* Cuadrícula de subproductos */
+        .lista-productos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .item-producto {
+            background: #fff8f2;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 5px 10px rgba(0,0,0,.1);
+            text-align: center;
+        }
+
+        .item-producto img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .item-producto h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .item-producto .precio {
+            font-size: 20px;
+            font-weight: bold;
+            color: #ff8c42;
+            margin-bottom: 15px;
+        }
+
+        .btn-cotizar {
+            display: inline-block;
+            background: #ff8c42;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-cotizar:hover {
+            background: #e0732b;
+        }
+
+        footer{
+            background:#ff8c42;
+            color:white;
+            text-align:center;
+            padding:20px;
+            margin-top: 50px;
+        }
+
+        /* BOTÓN WHATSAPP */
+        .whatsapp{
+            position:fixed;
+            width:65px;
+            height:65px;
+            bottom:25px;
+            right:25px;
+            z-index:1000;
+            transition: transform 0.3s;
+        }
+
+        .whatsapp:hover {
+            transform: scale(1.1);
+        }
+
+        .whatsapp img{
+            width:100%;
+        }
+
+        @media(max-width:768px){
+            nav a{
+                display:block;
+                margin:10px;
+            }
+        }
+    </style>
 </head>
 <body>
 
 <header>
-    <h1>🧵 Hilos</h1>
-    <p>Gran variedad de colores y marcas.</p>
+    <h1>🧵 Modas Flores</h1>
+    <nav>
+        <!-- Volver a las secciones de la página principal index.html -->
+        <a href="index.html#inicio">Inicio</a>
+        <a href="index.html#nosotros">Nosotros</a>
+        <a href="index.html#productos">Productos</a>
+        <a href="index.html#galeria">Galería</a>
+        <a href="index.html#contacto">Contacto</a>
+    </nav>
 </header>
 
-<div class="galeria">
+<main class="contenedor-producto">
+    <a href="index.html#productos" class="volver">← Volver a Productos</a>
+    
+    <h2>🧵 Hilos de Alta Calidad</h2>
+    <p class="descripcion-categoria">Contamos con variedad de calibres y marcas para costura industrial o casera.</p>
 
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518">
-        <h3>Hilos de colores</h3>
+    <div class="lista-productos">
+        
+        <!-- Producto 1 -->
+        <div class="item-producto">
+            <img src="https://unsplash.com" alt="Hilos de Poliéster">
+            <h3>Hilos de Poliéster</h3>
+            <p class="precio">L. 25.00</p>
+            <a href="https://wa.me" target="_blank" class="btn-cotizar">Consultar</a>
+        </div>
+
+        <!-- Producto 2 -->
+        <div class="item-producto">
+            <img src="https://unsplash.com" alt="Hilos de Algodón">
+            <h3>Hilos de Algodón</h3>
+            <p class="precio">L. 30.00</p>
+            <a href="https://wa.me" target="_blank" class="btn-cotizar">Consultar</a>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="item-producto">
+            <img src="https://unsplash.com" alt="Hilos para Bordar">
+            <h3>Hilos para Bordar</h3>
+            <p class="precio">L. 45.00</p>
+            <a href="https://wa.me" target="_blank" class="btn-cotizar">Consultar</a>
+        </div>
+
     </div>
+</main>
 
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a">
-        <h3>Hilos para costura</h3>
-    </div>
+<footer>
+    <p>© 2026 Modas Flores - Todos los derechos reservados.</p>
+</footer>
 
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f">
-        <h3>Hilos resistentes</h3>
-    </div>
-
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb">
-        <h3>Variedad de tonos</h3>
-    </div>
-
-</div>
-
-<a href="index.html" class="boton">⬅ Volver al Inicio</a>
+<!-- BOTÓN WHATSAPP -->
+<a class="whatsapp" href="https://wa.me" target="_blank" rel="noopener noreferrer">
+    <img src="https://flaticon.com" alt="Contacto de WhatsApp">
+</a>
 
 </body>
 </html>
