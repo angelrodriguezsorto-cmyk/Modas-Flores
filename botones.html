@@ -1,11 +1,66 @@
-<title>Botones | Modas Flores</title>
-
-<h1>🔘 Botones</h1>
-
-
-<p>Diferentes tamaños y estilos.</p>
-
-<h3>Botones clásicos</h3>
-<h3>Botones decorativos</h3>
-<h3>Botones metálicos</h3>
-<h3>Botones modernos</h3>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botones - Modas Flores</title>
+    <style>
+        *{ margin:0; padding:0; box-sizing:border-box; font-family: Arial, sans-serif; }
+        body{ background:#fff; color:#333; }
+        header{ background: linear-gradient(135deg, #ffb366, #ff8c42); color:white; padding:20px; text-align:center; position: sticky; top:0; z-index:1000; }
+        nav{ margin-top:15px; }
+        nav a{ color:white; text-decoration:none; margin:0 15px; font-weight:bold; }
+        nav a:hover{ text-decoration:underline; }
+        .contenedor-producto { padding: 50px 10%; }
+        .volver { display: inline-block; margin-bottom: 20px; color: #ff8c42; text-decoration: none; font-weight: bold; }
+        .volver:hover { text-decoration: underline; }
+        h2 { color: #ff8c42; font-size: 38px; margin-bottom: 10px; }
+        .descripcion-categoria { font-size: 18px; margin-bottom: 40px; color: #666; }
+        .lista-productos { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .item-producto { background: #fff8f2; border-radius: 15px; padding: 20px; box-shadow: 0 5px 10px rgba(0,0,0,.1); text-align: center; }
+        .item-producto img { width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 15px; }
+        .item-producto h3 { color: #333; margin-bottom: 10px; }
+        .item-producto .precio { font-size: 20px; font-weight: bold; color: #ff8c42; margin-bottom: 15px; }
+        .btn-cotizar { display: inline-block; background: #ff8c42; color: white; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-weight: bold; transition: 0.3s; }
+        .btn-cotizar:hover { background: #e0732b; }
+        footer{ background:#ff8c42; color:white; text-align:center; padding:20px; margin-top: 50px; }
+        .whatsapp{ position:fixed; width:65px; height:65px; bottom:25px; right:25px; z-index:1000; transition: transform 0.3s; }
+        .whatsapp:hover { transform: scale(1.1); }
+        .whatsapp img{ width:100%; }
+        @media(max-width:768px){ nav a{ display:block; margin:10px; } }
+    </style>
+</head>
+<body>
+<header>
+    <h1>🧵 Modas Flores</h1>
+    <nav>
+        <a href="index.html#inicio">Inicio</a>
+        <a href="index.html#nosotros">Nosotros</a>
+        <a href="index.html#productos">Productos</a>
+        <a href="index.html#galeria">Galería</a>
+        <a href="index.html#contacto">Contacto</a>
+    </nav>
+</header>
+<main class="contenedor-producto">
+    <a href="index.html#productos" class="volver">← Volver a Productos</a>
+    <h2>🔘 Botones Exclusivos</h2>
+    <p class="descripcion-categoria">Variedad de estilos, tamaños y materiales para camisas, sacos y vestidos.</p>
+    <div class="lista-productos">
+        <div class="item-producto">
+            <img src="https://unsplash.com" alt="Botones de Madera">
+            <h3>Botones de Madera rústicos</h3>
+            <p class="precio">L. 5.00 c/u</p>
+            <a href="https://wa.me" target="_blank" class="btn-cotizar">Consultar</a>
+        </div>
+        <div class="item-producto">
+            <img src="https://unsplash.com" alt="Botones de Colores">
+            <h3>Botones de Resina de Colores</h3>
+            <p class="precio">L. 3.00 c/u</p>
+            <a href="https://wa.me" target="_blank" class="btn-cotizar">Consultar</a>
+        </div>
+    </div>
+</main>
+<footer><p>© 2026 Modas Flores - Todos los derechos reservados.</p></footer>
+<a class="whatsapp" href="https://wa.me" target="_blank" rel="noopener noreferrer"><img src="https://flaticon.com" alt="WhatsApp"></a>
+</body>
+</html>
